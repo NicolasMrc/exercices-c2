@@ -3,5 +3,5 @@ project(tp2c__)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp Voiture.cpp Voiture.h Etudiant.cpp Etudiant.h EtudiantEnMaitrise.cpp EtudiantEnMaitrise.h Point.cpp Point.h)
+set(SOURCE_FILES main.cpp Voiture.cpp Voiture.h Etudiant.cpp Etudiant.h EtudiantEnMaitrise.cpp EtudiantEnMaitrise.h Point.cpp Point.h Vector.cpp Vector.h)
 add_executable(tp2c__ ${SOURCE_FILES})

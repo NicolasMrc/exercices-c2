@@ -3,6 +3,7 @@
 #include "Etudiant.h"
 #include "Point.h"
 #include "EtudiantEnMaitrise.h"
+#include "Vector.h"
 
 using namespace std;
 
@@ -164,4 +165,17 @@ void exercice11(){
 
 
     cout << "\nVector : " << endl;
+
+    cout << "\nVecteur taille 10 :" << endl;
+    Vector v1(10);
+    v1.afficher();
+
+    cout << "\nVecteur taille 20 :" << endl;
+    Vector v2(20);
+    v2.afficher();
+
+    Vector v3(5);
+    v3 = v1 + v2;
+    cout << "\nVecteur 3 :" << endl;
+    v3.afficher();
 }
