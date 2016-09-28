@@ -176,13 +176,28 @@ void exercice11(){
 
     Vector v3(5);
 
+    v3 = v1 + v2;
+    cout << "\nv3 = v1 + v2" << endl;
+    cout << "v3 : " << endl;
+    v3.afficher();
+
+    v3 = v1 - v2;
+    cout << "\nv3 = v1 - v2" << endl;
+    cout << "v3 : " << endl;
+    v3.afficher();
+
+    v3 = v1 * v2;
+    cout << "\nv3 = v1 * v2" << endl;
+    cout << "v3 : " << endl;
+    v3.afficher();
+
     v3<<v2;
     cout << "\nv3<<v2" << endl;
-    cout << "\nv3 : " << endl;
+    cout << "v3 : " << endl;
     v3.afficher();
 
     v1>>&v3;
     cout << "\nv1>>v3" << endl;
-    cout << "\nv3 : " << endl;
+    cout << "v3 : " << endl;
     v3.afficher();
 }

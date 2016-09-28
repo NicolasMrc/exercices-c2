@@ -13,6 +13,7 @@ private:
 public:
     Vector(int taille);
     void afficher();
+    void saisie();
     long operator=(Vector v);
     Vector operator+(Vector v);
     Vector operator-(Vector v);

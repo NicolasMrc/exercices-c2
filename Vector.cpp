@@ -7,6 +7,14 @@
 
 using namespace std;
 
+/**
+ * constructeur de Vector
+ * initialise les valeurs du tableau avec leurs indices
+ * @param taille
+ *      la taille du tableau dynamique
+ * @return
+ *      le vecteur
+ */
 Vector::Vector(int taille){
     Vector::taille = taille;
     Vector::t = new int[taille];
@@ -15,9 +23,22 @@ Vector::Vector(int taille){
     }
 }
 
+/**
+ * permet d'afficher le tableau du vecteur
+ */
 void Vector::afficher(){
     for (int i = 0; i < Vector::taille; ++i) {
         cout << "["<<i<<"] -> "<< Vector::t[i] << endl;
+    }
+}
+
+/**
+ * permet la saisie des entier du tableau
+ */
+void Vector::saisie(){
+    for (int i = 0; i < Vector::taille; ++i) {
+        cout << "nombre " << i << " ? " << endl;
+        cin >> Vector::t[i];
     }
 }
 
@@ -34,14 +55,6 @@ long Vector::operator=(Vector v){
     }
 }
 
-/**
- * methode qui ajoute deux vecteur
- * instancie un tableau de taille egale au tableau le plus grand des deux vector ajouté
- * @param v
- *      le vecteur ajouté
- * @return
- *      le vecteur resultat de l'operation
- */
 Vector Vector::operator+(Vector v){
 
     if (v.taille < Vector::taille){
@@ -89,12 +102,11 @@ Vector Vector::operator-(Vector v){
 
         for (int i = 0; i < r.taille ; ++i) {
             if (i <= Vector::taille){
-                r.t[i] = Vector::t[i] ;
+                r.t[i] = Vector::t[i] - v.t[i];
             } else {
                 r.t[i] = - v.t[i];
             }
         }
-
         return r;
     }
 }
