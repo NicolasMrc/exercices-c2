@@ -2,6 +2,7 @@
 #include "Voiture.h"
 #include "Etudiant.h"
 #include "Point.h"
+#include "EtudiantEnMaitrise.h"
 
 using namespace std;
 
@@ -52,35 +53,80 @@ void exercice9(){
 }
 
 void exercice10(){
+    int choixEtudiant;
+    cout << "Quel partie ?\n1 - Etudiant\n2 - Etudiants en maitrise" << endl;
+    cin >> choixEtudiant;
+
     Etudiant e1, e2;
+    EtudiantEnMaitrise em1, em2;
 
-    e1.saisie();
-    e2.saisie();
+    switch (choixEtudiant){
+        case 1 :
+            e1.saisie();
+            e2.saisie();
 
-    cout << "Recapitulatif : " << endl;
-    cout << "Etudiant 1 : " << endl;
-    e1.affichage();
-    cout << "\nEtudiant 2 : " << endl;
-    e2.affichage();
+            cout << "Recapitulatif : " << endl;
+            cout << "Etudiant 1 : " << endl;
+            e1.affichage();
+            cout << "\nEtudiant 2 : " << endl;
+            e2.affichage();
 
 
-    if(e1.admis()==1){
-        cout << "\nLe premier étudiant est admis !" << endl;
-    } else{
-        cout << "Le premier étudiant n'est pas admis !" << endl;
-    };
+            if(e1.admis()==1){
+                cout << "\nLe premier étudiant est admis !" << endl;
+            } else{
+                cout << "Le premier étudiant n'est pas admis !" << endl;
+            };
 
-    if(e2.admis()==1){
-        cout << "Le deuxième étudiant est admis !" << endl;
-    } else{
-        cout << "Le deuxième étudiant n'est pas admis !" << endl;
-    };
+            if(e2.admis()==1){
+                cout << "Le deuxième étudiant est admis !" << endl;
+            } else{
+                cout << "Le deuxième étudiant n'est pas admis !" << endl;
+            };
 
-    if(e1.exae_quo(e2) == 1){
-        cout << "Les deux élèves sont à égalité !";
-    } else {
-        cout << "Les deux étudiant ne sont pas a égalité";
+            if(e1.exae_quo(e2) == 1){
+                cout << "Les deux élèves sont à égalité !";
+            } else {
+                cout << "Les deux étudiant ne sont pas a égalité";
+            }
+            break;
+
+
+        case 2 :
+            em1.saisie();
+            em2.saisie();
+
+            cout << "Recapitulatif : " << endl;
+            cout << "Etudiant en maitrise 1 : " << endl;
+            em1.affichage();
+            cout << "\nEtudiant en maitrise 2 : " << endl;
+            em2.affichage();
+
+            if(em1.admis()==1){
+                cout << "\nLe premier étudiant en maitrise est admis !" << endl;
+            } else{
+                cout << "Le premier étudiant en maitrise n'est pas admis !" << endl;
+            };
+
+            if(em2.admis()==1){
+                cout << "Le deuxième étudiant en maitrise est admis !" << endl;
+            } else{
+                cout << "Le deuxième étudiant en maitrise n'est pas admis !" << endl;
+            };
+
+            if(em1.exae_quo(em2) == 1){
+                cout << "Les deux élèves en maitrise sont à égalité !";
+            } else {
+                cout << "Les deux étudiant en maitrise ne sont pas a égalité";
+            }
+            break;
+        default:
+            break;
     }
+
+
+    
+
 }
 
 void exercice11(){
