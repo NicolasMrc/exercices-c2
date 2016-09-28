@@ -175,7 +175,14 @@ void exercice11(){
     v2.afficher();
 
     Vector v3(5);
+
     v3<<v2;
-    cout << "\nVecteur 3 :" << endl;
+    cout << "\nv3<<v2" << endl;
+    cout << "\nv3 : " << endl;
+    v3.afficher();
+
+    v1>>&v3;
+    cout << "\nv1>>v3" << endl;
+    cout << "\nv3 : " << endl;
     v3.afficher();
 }

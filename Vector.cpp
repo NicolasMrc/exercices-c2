@@ -138,11 +138,11 @@ void Vector::operator<<(Vector v){
 
 }
 
-void Vector::operator>>(Vector v){
-    v.taille = Vector::taille;
-    v.t = new int[v.taille];
+void Vector::operator>>(Vector *v){
+    (*v).taille = Vector::taille;
+    (*v).t = new int[(*v).taille];
 
-    for (int i = 0; i < v.taille ; ++i) {
-        v.t[i] = Vector::t[i];
+    for (int i = 0; i < (*v).taille ; ++i) {
+        (*v).t[i] = Vector::t[i];
     }
 }
