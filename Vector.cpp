@@ -127,10 +127,22 @@ Vector Vector::operator*(Vector v){
     }
 }
 
-Vector Vector::operator<<(Vector v){
-    
+void Vector::operator<<(Vector v){
+
+    Vector::taille = v.taille;
+    Vector::t = new int[Vector::taille];
+
+    for (int i = 0; i < v.taille ; ++i) {
+        Vector::t[i] = v.t[i];
+    }
+
 }
 
-Vector Vector::operator>>(Vector v){
-    
+void Vector::operator>>(Vector v){
+    v.taille = Vector::taille;
+    v.t = new int[v.taille];
+
+    for (int i = 0; i < v.taille ; ++i) {
+        v.t[i] = Vector::t[i];
+    }
 }

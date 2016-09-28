@@ -175,7 +175,7 @@ void exercice11(){
     v2.afficher();
 
     Vector v3(5);
-    v3 = v1 + v2;
+    v3<<v2;
     cout << "\nVecteur 3 :" << endl;
     v3.afficher();
 }

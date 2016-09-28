@@ -17,8 +17,8 @@ public:
     Vector operator+(Vector v);
     Vector operator-(Vector v);
     Vector operator*(Vector v);
-    Vector operator<<(Vector v);
-    Vector operator>>(Vector v);
+    void operator<<(Vector v);
+    void operator>>(Vector v);
 };
 
 
