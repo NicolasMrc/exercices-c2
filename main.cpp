@@ -1,19 +1,21 @@
 #include <iostream>
 #include "Voiture.h"
 #include "Etudiant.h"
+#include "Point.h"
 
 using namespace std;
 
 void exercice9();
 void exercice10();
+void exercice11();
 
 int main() {
     cout << "TP 2 C++" << std::endl;
-    cout << "Voulez-vous lancer l'exercice 9 ou l'exercice 10 ?" << std::endl;
+    cout << "Voulez-vous lancer l'exercice 9, l'exercice 10 ou l'exercice 11 ?" << std::endl;
     int choix;
     cin >> choix;
-    while (choix < 9 || choix > 10){
-        cout << "Voulez-vous lancer l'exercice 9 ou l'exercice 10 ?" << std::endl;
+    while (choix < 9 || choix > 11){
+        cout << "Voulez-vous lancer l'exercice 9 l'exercice 10 ou l'exercice 11 ?" << std::endl;
         cin >> choix;
     }
 
@@ -25,6 +27,10 @@ int main() {
         case 10:
             cout << "Exercice 10 :" << std::endl;
             exercice10();
+            break;
+        case 11:
+            cout << "Exercice 11 :" << std::endl;
+            exercice11();
             break;
         default:
             break;
@@ -75,4 +81,41 @@ void exercice10(){
     } else {
         cout << "Les deux étudiant ne sont pas a égalité";
     }
+}
+
+void exercice11(){
+    Point p1(2, 3, 1);
+    Point p2(4, 5, 2);
+    Point p3(0, 0, 3);
+
+    p1.affiche();
+    p2.affiche();
+
+    cout << "\nP3 = P2 :" << endl;
+    p3 = p2;
+    p3.affiche();
+
+    cout << "\nOperateur =" << endl;
+    cout << "P3 = P1 + P2 :" << endl;
+    p3 = p1 + p2;
+    p3.affiche();
+
+    cout << "\nOperateur -" << endl;
+    cout << "P3 = P1 + P2 :" << endl;
+    p3 = p1 - p2;
+    p3.affiche();
+
+    cout << "\nOperateur *" << endl;
+    cout << "P3 = P1 * P2 :" << endl;
+    p3 = p1 * p2;
+    p3.affiche();
+
+    cout << "\nOperateur /" << endl;
+    cout << "P3 = P2 / P1 :" << endl;
+    p3 = p2 / p1;
+    p3.affiche();
+
+
+
+    cout << "\nVector : " << endl;
 }

@@ -5,6 +5,10 @@
 #include "EtudiantEnMaitrise.h"
 
 
-int EtudiantEnMaitrise::exae_quo(EtudiantEnMaitrise E) : exae_quo() {
-
+int EtudiantEnMaitrise::exae_quo(EtudiantEnMaitrise E) {
+    if (E.moyenne() == EtudiantEnMaitrise::moyenne() && E.note_memoire == EtudiantEnMaitrise::note_memoire){
+        return 1;
+    } else {
+        return 0;
+    }
 }

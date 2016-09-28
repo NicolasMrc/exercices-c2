@@ -11,6 +11,8 @@
 class EtudiantEnMaitrise: public Etudiant{
     int note_memoire;
 public:
+    using Etudiant::exae_quo;
+    int exae_quo(EtudiantEnMaitrise E);
 };
 
 

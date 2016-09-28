@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Etudiant.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Etudiant.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/EtudiantEnMaitrise.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Point.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Point.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Voiture.cpp" isTestSource="false" />
     </content>
