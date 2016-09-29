@@ -6,6 +6,9 @@
 #define TP2C_POINT_H
 
 
+/**
+ * Classe point
+ */
 class Point {
     private:
         int x;

@@ -41,16 +41,33 @@ int main() {
     return 0;
 }
 
+/**
+ * fonction repondant a l'exercice 9, testant ses différentes fonctions de la classe voiture.
+ * construction, destruction, construction par recopie, affichage,
+ * GetNom qui donne le nom de la voiture, GetAnnee qui donne l'année de la voiture)
+ */
 void exercice9(){
-    string picasso = "picasso";
-    string verso = "verso";
-    Voiture v1(&picasso, 3453), v2(&verso, 1234);
 
-    cout << "Nom de la voiture 1 : " << *(v1.GetNom()) << endl;
-    cout << "Année de construction \n : " << v1.GetAnnee() << endl;
+    string nom = "";
+    int annee = 0;
+    cout << "Quelle est le nom du véhicule ?" << endl;
+    cin >> nom;
+    cout << "Quelle est l'année de construction du véhicule ?" << endl;
+    cin >> annee;
+    cout << "\n...Construction..." << endl;
+    Voiture v1(&nom, annee);
 
-    cout << "Nom de la voiture 2 : " << *(v2.GetNom()) << endl;
-    cout << "Année de construction \n : " << v2.GetAnnee() << endl;
+    cout << "\n...Affichage..." << endl;
+    v1.affiche();
+
+    cout << "\n...Construction de la voiture 2 par recopie..." << endl;
+    Voiture v2(v1);
+
+    cout << "\nFonction getNom() & getAnnee() sur la voiture 2 : " << endl;
+    cout << "Nom de la voiture : " << *(v2.GetNom()) << endl;
+    cout << "Année de construction : " << v2.GetAnnee() << endl;
+
+    cout << "\n... Destruction des voiture 1 & 2 ..." << endl;
 }
 
 void exercice10(){

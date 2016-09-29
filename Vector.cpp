@@ -24,7 +24,7 @@ Vector::Vector(int taille){
 }
 
 /**
- * permet d'afficher le tableau du vecteur
+ * permet d'afficher le tableau dynamique du vecteur
  */
 void Vector::afficher(){
     for (int i = 0; i < Vector::taille; ++i) {
@@ -33,7 +33,7 @@ void Vector::afficher(){
 }
 
 /**
- * permet la saisie des entier du tableau
+ * permet la saisie des entier du tableau dynamique du vecteur
  */
 void Vector::saisie(){
     for (int i = 0; i < Vector::taille; ++i) {
@@ -42,6 +42,14 @@ void Vector::saisie(){
     }
 }
 
+/**
+ * surchage de l'operateur =
+ * permet d'assigner le tableau dynamique d'un vecteur a un autre
+ * @param v
+ *      le vecteur a assigner
+ * @return
+ *      le vecteur
+ */
 long Vector::operator=(Vector v){
     int tailleMin;
     if (v.taille > Vector::taille){
@@ -55,6 +63,14 @@ long Vector::operator=(Vector v){
     }
 }
 
+/**
+ * surcharge de l'operateur +
+ * permet d'aditioner les valeur des tableaux dynamiques de deux vecteur dans un vecteur resultat
+ * @param v
+ *      le vecteur a additionner
+ * @return
+ *      le vecteur resultat
+ */
 Vector Vector::operator+(Vector v){
 
     if (v.taille < Vector::taille){
@@ -84,6 +100,14 @@ Vector Vector::operator+(Vector v){
     }
 }
 
+/**
+ * surcharge de l'operateur -
+ * permet de soustraire un vecteur a un autre
+ * @param v
+ *      le vecteur a soustaire
+ * @return
+ *      le vecteur resultat
+ */
 Vector Vector::operator-(Vector v){
     if (v.taille < Vector::taille){
         Vector r(Vector::taille);
@@ -111,6 +135,14 @@ Vector Vector::operator-(Vector v){
     }
 }
 
+/**
+ * surcharge de l'operateur *
+ * permet de multiplier les valeurs des tableaux dynamique des deux vecteurs
+ * @param v
+ *      le vecteur a mulitiplier
+ * @return
+ *      le vecteur
+ */
 Vector Vector::operator*(Vector v){
     if (v.taille < Vector::taille){
         Vector r(Vector::taille);
@@ -139,6 +171,11 @@ Vector Vector::operator*(Vector v){
     }
 }
 
+/**
+ * surcharge de l'operateur << permet d'assigner le tableau dynamique d'un vecteur passé en parametre au vecteur
+ * @param v
+ *      le vecteur dont le tableau doit etre assigné
+ */
 void Vector::operator<<(Vector v){
 
     Vector::taille = v.taille;
@@ -150,6 +187,11 @@ void Vector::operator<<(Vector v){
 
 }
 
+/**
+ * permet d'assigner le tableau dynamique au vecteur passé en parametre
+ * @param v
+ *      le vecteur a qui doit etre assigné le tableau dynamique
+ */
 void Vector::operator>>(Vector *v){
     (*v).taille = Vector::taille;
     (*v).t = new int[(*v).taille];

@@ -6,6 +6,9 @@
 #define TP2C_VECTOR_H
 
 
+/**
+ * Classe Vetcor
+ */
 class Vector {
 private:
     int *t;
