@@ -8,6 +8,9 @@
 
 #include "Etudiant.h"
 
+/**
+ * Classe Etudiant en Maitrise
+ */
 class EtudiantEnMaitrise: public Etudiant{
     int note_memoire;
 public:

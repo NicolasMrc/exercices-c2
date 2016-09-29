@@ -9,6 +9,9 @@
 
 using  namespace std;
 
+/**
+ * Classe etudiant
+ */
 class Etudiant {
 protected:
     string nom, prenom;

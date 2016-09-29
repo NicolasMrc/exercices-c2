@@ -70,6 +70,11 @@ void exercice9(){
     cout << "\n... Destruction des voiture 1 & 2 ..." << endl;
 }
 
+/**
+ * Exercice 10 :
+ * Classe Etudiant : saisie, affichage, calcul & affichage de la moyenne, admissibilité, exae_quo avec un autre etudiant
+ * Classe Etudiant en maitrise heritant de Etudiant et redefinition de certaines methode
+ */
 void exercice10(){
     int choixEtudiant;
     cout << "Quel partie ?\n1 - Etudiant\n2 - Etudiants en maitrise" << endl;
@@ -147,6 +152,11 @@ void exercice10(){
 
 }
 
+/**
+ * Exercice 11
+ * Surcharge d'oerateur { + , - , * , / , = } pour la classe Point
+ * Surcharge d'oerateur { + , - , * , << , >> , = } pour la classe Vector
+ */
 void exercice11(){
     Point p1(2, 3, 1);
     Point p2(4, 5, 2);
